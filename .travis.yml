@@ -1,5 +1,7 @@
 language: cpp
 os: windows
+before_script:
+ - choco install -y microsoft-build-tools
 script:
  - msbuild cpp-ci-demo.sln /p:Configuration=Release /p:Platform=x86 /m
  - msbuild cpp-ci-demo.sln /p:Configuration=Release /p:Platform=x64 /m
