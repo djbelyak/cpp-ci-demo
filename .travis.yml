@@ -1,0 +1,5 @@
+language: cpp
+os: windows
+script:
+ - msbuild cpp-ci-demo.sln /p:Configuration=Release /p:Platform=x86 /m
+ - msbuild cpp-ci-demo.sln /p:Configuration=Release /p:Platform=x64 /m
