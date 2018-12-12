@@ -4,5 +4,5 @@ env:
  - MSBUILD_PATH="c:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\Bin"
 script:
  - export PATH=$MSBUILD_PATH:$PATH
- - xbuild cpp-ci-demo.sln /p:Configuration=Release /p:Platform=x86 /m
- - xbuild cpp-ci-demo.sln /p:Configuration=Release /p:Platform=x64 /m
+ - msbuild cpp-ci-demo.sln /p:Configuration=Release /p:Platform=x86 /m
+ - msbuild cpp-ci-demo.sln /p:Configuration=Release /p:Platform=x64 /m
