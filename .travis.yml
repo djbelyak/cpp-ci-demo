@@ -2,6 +2,8 @@ language: cpp
 os: windows
 env:
  - MSBUILD_PATH="c:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\Bin"
+before_script:
+ - choco install windows-sdk-10.0 -y --version 10.0.26624
 script:
  - export PATH=$MSBUILD_PATH:$PATH
  - msbuild.exe ./cpp-ci-demo.vcxproj //p:Configuration=release //p:Platform=x86 //m
