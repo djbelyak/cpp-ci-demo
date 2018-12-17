@@ -12,7 +12,7 @@ script:
 deploy:
   provider: releases
   api_key: 
-    - "$GITHUB_OAUTH_TOKEN"
+    secure: "$GITHUB_OAUTH_TOKEN"
   file:
     - "release/cpp-ci-demo.exe"
     - "x64/release/cpp-ci-demo.exe"
