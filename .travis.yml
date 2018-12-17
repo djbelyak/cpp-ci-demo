@@ -18,5 +18,5 @@ deploy:
     - "x64/release/cpp-ci-demo.exe"
   skip_cleanup: true
   on:
-    tags: true
+    # tags: true
     all_branches: true
