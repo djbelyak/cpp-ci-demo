@@ -8,3 +8,12 @@ script:
  - export PATH=$MSBUILD_PATH:$PATH
  - msbuild.exe ./cpp-ci-demo.vcxproj //p:Configuration=release //p:Platform=x86 //m
  - msbuild.exe ./cpp-ci-demo.vcxproj //p:Configuration=release //p:Platform=x64 //m
+
+deploy:
+  provider: releases
+  api_key:
+    secure: YOUR_API_KEY_ENCRYPTED
+  file:
+    - "release/cpp-ci-demo.exe"
+    - "x64/release/cpp-ci-demo.exe"
+  skip_cleanup: true
