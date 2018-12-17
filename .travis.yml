@@ -11,10 +11,10 @@ script:
 
 deploy:
   provider: releases
+  api_key: 
+    secure: "$GITHUB_OAUTH_TOKEN"
   file:
     - "release/cpp-ci-demo.exe"
-    - "x64/release/cpp-ci-demo.exe"
   skip_cleanup: true
   on:
-    # tags: true
-    all_branches: true
+    tags: true
